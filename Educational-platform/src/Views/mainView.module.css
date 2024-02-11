@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@1,700&family=Jost&family=Play&display=swap');
+* {
+    margin: 0;/*это свойство можно удалить, если вы используете reset, normalize или нечто подобное*/
+    font-family: 'Jost', sans-serif;
+    color: #5f2e12;
+}
+
+html,
+body {
+
+    font-family: 'Play', sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(0deg, rgba(59, 35, 35, 0) 0%, rgba(95, 46, 18, 0) 36%, rgb(240 85 122 / 0%) 100%);
+}
+h2{
+    font-family: 'Play', sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 40px 0px 0px 0px;
+}
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 0 auto;
+    /*padding-top: 20px;*/
+    /*padding: 10rem;!*это свойство можно удалить, добавлено для наглядности*!*/
+    /*background: #e6f2ff;!*это свойство можно удалить, добавлено для наглядности*!*/
+}
+
+footer {
+    flex: 0 0 auto;
+
+    padding: 1rem;/*это свойство можно удалить, добавлено для наглядности*/
+    /*background: #e6ffe6;!*это свойство можно удалить, добавлено для наглядности*!*/
+}
+
+.App {
+    /*text-align: center;*/
+}
+.img_main{
+    width: 100px;
+}
+
+.img_modal{
+    width: 100%;
+}
+
+
+.modal {
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5); /* цвет фона */
+    z-index: 1050;
+    opacity: 0; /* по умолчанию модальное окно прозрачно */
+    -webkit-transition: opacity 200ms ease-in;
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    margin: 0;
+    padding: 0;
+}
+/* при отображении модального окно */
+.modal:target {
+    opacity: 1; /* делаем окно видимым */
+    pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 500px;
+        margin: 30px auto; /* для отображения модального окна по центру */
+    }
+}
+/* свойства для блока, содержащего контент модального окна */
+.modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+@media (min-width: 768px) {
+    .modal-content {
+        -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+        box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    }
+}
+/* свойства для заголовка модального окна */
+.modal-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #eceeef;
+}
+.modal-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+/* свойства для кнопки "Закрыть" */
+.close {
+    float: right;
+    font-family: 'Play', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    text-decoration: none;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus, .close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
+}
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body {
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+    overflow: auto;
+}
+
+.block_main{
+    width:100%;
+    height: auto;
+    background-color: #ffffff;
+
+}
+.block_main {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+
+}
+
+
+.citata{
+    font-family: 'Advent Pro', sans-serif;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Play', sans-serif;
+    font-weight: bold;
+    width: 50vw;
+    margin: 45vh auto;
+    color: #3b2323;
+    position: absolute;
+    font-size:35px;
+}
+.citata p{
+    text-align: end;
+}
+.citata p:last-child{
+    color: #464246;
+    font-size: 30px;
+
+}
+
+.content_main{
+    display: flex;
+    /*height: 100vh;*/
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.background_main{
+    height: 100vh;
+    min-height: 500px;
+    transform-style: preserve-3d;
+}
+
+.cup{
+
+}
+
+.cup_of_coffee{
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: 0;*/
+    width: 100%;
+    height: 100vh;
+
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    inset: -5vw;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cup_layer1{
+    position: absolute;
+    width: 100%;
+    z-index: -100;
+}
+.cup_layer2{
+    position: absolute;
+    width: 100%;
+    z-index: -100;
+}
+.cup_layer3{
+    position: absolute;
+    width: 100%;
+    z-index: -100;
+}
+
+.cup_layer1 img{
+    width: 100%;
+    height: 90vh;
+    transform:translateZ(-128px) translateX(269px) translateY(-85px) scale(1.06);
+    transform-origin: center;
+}
+.cup_layer2 img{
+    width: 100%;
+    height: 90vh;
+    transform: translateZ(-156px) translateX(167px) translateY(-18px) scale(1.0);
+    transform-origin: center;
+}
+.cup_layer3 img{
+    width: 100%;
+    height: 90vh;
+    transform: translateZ(-98px) translateX(64px) translateY(-18px) scale(0.90);
+    transform-origin: center;
+
+}
+
+.container_parallax img{
+
+    position: absolute;
+    inset: -5vw;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.layer1{
+    transition: 0.05s;
+    filter: opacity(0.3);
+    width: 100%;
+    transform-origin: center;
+    /* transform: rotate(90deg); */
+    transform: translate3d(0vw, 0vh, -1006px) scale(2) rotate(90deg);
+}
+.layer2{
+    z-index: 100;
+    /* transform: translate3d(10px, 10px, 10px); */
+    transform: translate3d(64vw, 42vh, -481px);
+}
+
+.layer3{
+    width: 100%;
+    filter: blur(0.6px);
+    /* transform: translate3d(10px, 10px, 10px); */
+    transform: translate3d(0px, 100vh, 10px) scale3d(1.5, 1.5, 1.5);
+}
+.layer4{
+    transform: translate3d(0vw, 81vh, -1209px) scale3d(3.5, 1.5, 1.5);
+}
+.layer23{
+    z-index: 1001;
+    filter: blur(11px);
+    opacity: 0.4;
+    /* transform: translate3d(10px, 10px, 10px); */
+    transform: translate3d(28vw, -45vh, -34px) scale(0.9);
+}
+
+.shadow {
+    transform-origin: center;
+    position: absolute;
+    width: 175px;
+    height: 100px;
+    background: #2326279e;
+    z-index: 97;
+    box-shadow: 10px -1px 20px 15px #2326279e;
+    border-radius: 50%;
+    /* transform: translate3d(10px, 10px, 10px); */
+    transform: translate3d(83vw, 104vh, -481px) scale3d(2.5, 0.5, 1.5);
+}
+
+/*facts*/
+.facts{
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.stages{
+    width: 100%;
+    text-align: center;
+}
+
+.container_facts{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.facts .container_facts div{
+    width: 50vw;
+    margin: 10px 10px 10px 10px;
+
+
+}
+.title_facts{
+
+}
+
+.slider{
+
+}

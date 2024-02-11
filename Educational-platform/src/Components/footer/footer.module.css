@@ -1,0 +1,41 @@
+
+.container_header{
+position: relative;
+    display: flex;
+    width: 74vw;
+    margin: 50px auto;
+}
+.container_header:before{
+    content:"";
+    width:75vw;
+    position: absolute;
+    height: 3px;
+    top:-20px;
+    background: #544949;
+
+
+}
+
+.mail img{
+    width: 60px;
+}
+.social_media img{
+width: 60px;
+}
+
+.links{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer_links{
+    padding-top: 10px;
+}
+
+.container_media{
+    display: flex;
+}
+
+.container_media a{
+  padding: 10px;
+}
