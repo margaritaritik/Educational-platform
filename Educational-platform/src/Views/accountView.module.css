@@ -38,24 +38,23 @@
     border-radius: 15px;
     margin-left: 30px;
     text-align: center;
+    padding: 15px;
 }
 .save_info_btn{
     display: flex;
-    height: 40px;
-    width: 100px;
+    height: 56px;
+    width: 140px;
+    font-size: 20px;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
     background: #2876ED;
     border: transparent;
     color: white;
+
 }
 .container_save_btn{
-    display: flex;
-    align-items: flex-end;
-    position: relative;
-    top: 30px;
-    right: 23%;
+
 }
 .container_info input{
     display: block;
@@ -102,13 +101,14 @@ progress{
 }
 .info_input1{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: column;
-    margin-left: 50px;
+    /*margin-left: 50px;*/
 }
 .info_input2{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: column;
     margin-left: 15px;
+    align-items: flex-end;
 }

@@ -3,6 +3,7 @@ import people from "../Data/items";
 import styles from './loginView.module.css'
 import Navbar from "../Components/Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
+import { TextField } from "@mui/material";
 
 const LoginView = () => {
     const navigate = useNavigate();
@@ -33,7 +34,7 @@ const LoginView = () => {
 for(let i=0;i<people.length;i++){
     if(login===people[i].login && password===people[i].pass){
         console.log(people[i].login);
-        localStorage.setItem('account',JSON.stringify(login));
+        localStorage.setItem('account',JSON.stringify({login:login,name:people[i].name}));
         localStorage.setItem('accountImage',JSON.stringify(people[i].img));
         navigate("/account");
         break;
@@ -49,26 +50,18 @@ for(let i=0;i<people.length;i++){
                     <div className={styles.container}>
                         <h3>АВТОРИЗАЦИЯ</h3>
                         <div className={styles.textField}>
-                            <input
-                                name="title"
-                                type="text"
-                                value={login}
-                                onChange={(e) => setLogin(e.target.value)}
-                            />
-                            {/*<TextField name="title"  color="warning"*/}
-                            {/*           type="text" value={login}*/}
-                            {/*           label="логин" variant="standard" onChange={e => setLogin(e.target.value)}/>*/}
+
+                            <TextField name="title"
+                                       type="text" value={login}
+                                       label="логин" variant="outlined" onChange={e => setLogin(e.target.value)}/>
                             {loginError && <div className="error"> {loginError}</div>}
                         </div>
                         <div className={styles.textField}>
-                            <input name="title"
-                                   type="password"
-                                   value={password}
-                                   onChange={(e) => setPassword(e.target.value)}
-                            />
-                            {/*<TextField name="title"  color="success"*/}
-                            {/*           type="password" value={password}*/}
-                            {/*           label="пароль" variant="standard" onChange={e => setPassword(e.target.value)}/>*/}
+
+                            <TextField name="title"
+                                       type="password" value={password}
+                                       label="пароль" variant="outlined" onChange={e => setPassword(e.target.value)}/>
+
 
                             {passwordError && <div className="error">{passwordError}</div>}
                         </div>

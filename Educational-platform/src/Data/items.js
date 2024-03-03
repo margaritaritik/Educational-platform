@@ -3,6 +3,7 @@ const people=[
     {
         id:1,
         login:"1",
+        name:"Мария Разумовская",
         pass:"1",
         role:"student",
     },
