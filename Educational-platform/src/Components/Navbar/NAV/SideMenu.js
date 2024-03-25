@@ -65,9 +65,11 @@ SideMenu.defaultProps = {
     children: (
         <>
             <MenuLink href="/">Главная</MenuLink>
-            <MenuLink href="/articles">Статьи</MenuLink>
-            <MenuLink href="/about">О сайте</MenuLink>
-            <MenuLink href="/contact">Контакт</MenuLink>
+            <MenuLink href="/journal">Дневник</MenuLink>
+            <MenuLink href="/raspisanie">Расписание</MenuLink>
+            <MenuLink href="/news">Новости</MenuLink>
+            <MenuLink href="/about_org">Об организации</MenuLink>
+            <MenuLink href="/contact">Контакты</MenuLink>
         </>
     ),
 };

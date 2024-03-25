@@ -1,19 +1,14 @@
 import React from 'react';
-import styles from "./mainView.module.css"
+import styles from "./moreNewsView.module.css"
 import Navbar from "../Components/Navbar/Navbar";
-import Footer from "../Components/footer/footer";
 import new1 from "../images/news_images/img.png";
-import {useNavigate} from "react-router-dom";
-
-const MainView = () => {
-    const navigate = useNavigate();
-    const moreNewsBtnClick=()=>{
-        navigate("/news")
-    }
+import Footer from "../Components/footer/footer";
+const MoreNewsView = () => {
     return (
         <div>
             <div className={styles.wrapper}>
                 <Navbar></Navbar>
+
 
                 <div className={styles.content}>
                     <div className={styles.container_news}>
@@ -25,10 +20,34 @@ const MainView = () => {
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolor dolores dolorum eius quae. Earum, itaque totam. Amet eaque, et fuga id, nulla omnis quas quos repellat unde veniam voluptas!
                             </p>
-                            <button onClick={moreNewsBtnClick}>Больше новостей</button>
+
                         </div>
 
                         <div className={styles.news} >
+                            <div className={styles.item_news}>
+                                <img src={new1}/>
+                                <p> 12 марта 2024</p>
+                                <p> Описание описание описание </p>
+                                <button>Подробнее</button>
+                            </div>
+                            <div className={styles.item_news}>
+                                <img src={new1}/>
+                                <p> 12 марта 2024</p>
+                                <p> Описание описание описание </p>
+                                <button>Подробнее</button>
+                            </div>
+                            <div className={styles.item_news}>
+                                <img src={new1}/>
+                                <p> 12 марта 2024</p>
+                                <p> Описание описание описание </p>
+                                <button>Подробнее</button>
+                            </div>
+                            <div className={styles.item_news}>
+                                <img src={new1}/>
+                                <p> 12 марта 2024</p>
+                                <p> Описание описание описание </p>
+                                <button>Подробнее</button>
+                            </div>
                             <div className={styles.item_news}>
                                 <img src={new1}/>
                                 <p> 12 марта 2024</p>
@@ -62,4 +81,4 @@ const MainView = () => {
     );
 };
 
-export default MainView;
+export default MoreNewsView;

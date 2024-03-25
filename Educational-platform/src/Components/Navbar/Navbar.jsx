@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import style from './navbar.module.css';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import Logo from './logo.jpg';
+import Logo from './logo.svg';
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);

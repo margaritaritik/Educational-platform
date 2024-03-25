@@ -4,7 +4,7 @@ import useOnClickOutside from './onClickOutside';
 import { MenuContext } from './navState';
 import HamburgerButton from './HamburgerButton';
 import { SideMenu } from './SideMenu';
-import logo from '../logo.jpg';
+import logo from '../logo.svg';
 import account from "../../../images/accPhoto.jpg";
 import styles from './styles.module.css'
 

@@ -26,6 +26,7 @@ body {
 }
 .news_head p{
     width: 500px;
+    margin-right: 10px;
 }
 .news_head button{
     width: 170px;
@@ -46,6 +47,8 @@ body {
 }
 .item_news{
     margin-top: 50px;
+    margin-right: 40px;
+    width: 250px;
 }
 .news .item_news p:first-child{
     font-size: 12px;
@@ -71,4 +74,8 @@ body {
 }
 h2{
     font-size: 35px;
+}
+.item_news img{
+    width: 110%;
+    object-fit: cover;
 }

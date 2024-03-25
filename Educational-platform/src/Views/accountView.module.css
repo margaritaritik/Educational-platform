@@ -12,7 +12,8 @@
     margin: 10px auto;
 }
 .container_account{
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: 65vh;
     box-shadow: 1px 1px 10px 3px #E5EDF6 ;
     text-align: center;
@@ -112,3 +113,6 @@ progress{
     margin-left: 15px;
     align-items: flex-end;
 }
+
+/*mobile*/
+/*mobile*/

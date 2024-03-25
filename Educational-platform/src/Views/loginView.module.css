@@ -5,32 +5,34 @@
 .textField input{
     padding: 15px 10px 15px 10px;
 }
-form .textField{
-    padding:10px ;
+.textField{
+    margin-top: 20px;
 }
 .container{
     width: 30vw;
     margin: 23vh auto;
     text-align: center;
     background: #ffffff;
-    padding: 50px;
+    padding: 20px 40px;
     border-radius: 8px;
-    box-shadow: 1px 1px 20px 2px #ffa50052;
+    box-shadow: 1px 1px 18px 0px #2876ED;
 }
-
-
+h3{
+    color: #414141;
+}
 .textField div:first-child {
     width:100%
 }
 .container button{
-    width: 100%;
-    border-radius: 10px;
-    background: orange;
+    margin:20px auto;
+    display: flex;
+    height: 40px;
+    width: 140px;
+    font-size: 20px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    background: #2876ED;
+    border: transparent;
     color: white;
-    font-weight: bold;
-    font-size: 16px;
-    border: none;
-    margin-top: 10px;
-    margin-top: 24px;
-    padding: 6px;
 }

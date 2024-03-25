@@ -34,11 +34,12 @@ const LoginView = () => {
 for(let i=0;i<people.length;i++){
     if(login===people[i].login && password===people[i].pass){
         console.log(people[i].login);
-        localStorage.setItem('account',JSON.stringify({login:login,name:people[i].name}));
+        localStorage.setItem('account',JSON.stringify({login:login,name:people[i].name, role: people[i].role}));
         localStorage.setItem('accountImage',JSON.stringify(people[i].img));
         navigate("/account");
         break;
     }
+
 }
     };
     return (
@@ -53,14 +54,14 @@ for(let i=0;i<people.length;i++){
 
                             <TextField name="title"
                                        type="text" value={login}
-                                       label="логин" variant="outlined" onChange={e => setLogin(e.target.value)}/>
+                                       label="Логин" variant="outlined" onChange={e => setLogin(e.target.value)}/>
                             {loginError && <div className="error"> {loginError}</div>}
                         </div>
                         <div className={styles.textField}>
 
                             <TextField name="title"
                                        type="password" value={password}
-                                       label="пароль" variant="outlined" onChange={e => setPassword(e.target.value)}/>
+                                       label="Пароль" variant="outlined" onChange={e => setPassword(e.target.value)}/>
 
 
                             {passwordError && <div className="error">{passwordError}</div>}

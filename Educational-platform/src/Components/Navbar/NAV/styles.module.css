@@ -14,5 +14,7 @@
 }
 .NavLogo{
     display: flex;
-
+}
+.NavLogo img{
+    width: 100px;
 }
