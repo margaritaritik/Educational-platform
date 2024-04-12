@@ -9,15 +9,7 @@ const Navbar = () => {
     const [account, setAccount]=useState("")
     const savedItem = localStorage.getItem("account");
 
-    useEffect(() => {
-       if(window.location.href==='http://localhost:3000/login'){
-           setTestLogin(1);
-       }
 
-       if(window.location.href==='http://localhost:3000/account'){
-            setTestLogin(2);
-       }
-       }, []);
 
     return (
         <header className={style.header}>

@@ -79,3 +79,7 @@ h2{
     width: 110%;
     object-fit: cover;
 }
+
+.content{
+    margin-top: 50px;
+}

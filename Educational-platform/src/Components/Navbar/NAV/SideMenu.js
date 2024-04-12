@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import { MenuContext } from './navState';
 
 
+
 const Menu = styled.nav`
   position: absolute;
   top: 0px;
@@ -14,7 +15,7 @@ const Menu = styled.nav`
   width: 400px;
   max-width: 100%;
   margin-top: 0px;
-  padding-top: 100px;
+  padding-top: 150px;
   padding-right: 0px;
   align-items: stretch;
   background-color: #F6F8FA;
@@ -33,8 +34,8 @@ export const MenuLink = styled.a`
   display: block;
   text-align: left;
   max-width: 100%;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 20px;
   padding-left: 16%;
   background-position: 88% 50%;
   background-size: 36px;
@@ -42,7 +43,7 @@ export const MenuLink = styled.a`
   transition: background-position 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
   text-decoration: none;
   color: #000000;
-  font-size: 32px;
+  font-size: 24px;
   line-height: 120%;
   font-weight: 500;
 
@@ -70,6 +71,8 @@ SideMenu.defaultProps = {
             <MenuLink href="/news">Новости</MenuLink>
             <MenuLink href="/about_org">Об организации</MenuLink>
             <MenuLink href="/contact">Контакты</MenuLink>
+            <MenuLink href="/" onClick={()=>{
+                localStorage.clear();}}>Выход</MenuLink>
         </>
     ),
 };

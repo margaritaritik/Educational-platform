@@ -8,15 +8,15 @@ const Footer = () => {
         <>
             <footer>
                 <div className={styles.container_header}>
-                    <div className={styles.container_media}>
-                        <a className={styles.mail} href="/">
-                            <img src={mail}/>
-                        </a>
+                    {/*<div className={styles.container_media}>*/}
+                    {/*    <a className={styles.mail} href="/">*/}
+                    {/*        <img src={mail}/>*/}
+                    {/*    </a>*/}
 
-                        <a className={styles.social_media} href="/">
-                            <img src={vk}/>
-                        </a>
-                    </div>
+                    {/*    <a className={styles.social_media} href="/">*/}
+                    {/*        <img src={vk}/>*/}
+                    {/*    </a>*/}
+                    {/*</div>*/}
                 </div>
             </footer>
 

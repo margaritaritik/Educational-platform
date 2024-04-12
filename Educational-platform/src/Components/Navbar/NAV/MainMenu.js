@@ -54,7 +54,10 @@ const MainMenu = () => {
                 </div>
                <div className={styles.NavAccount}>
                    <p>{savedItem}</p>
-                   <img className={styles.accountPhoto} src={account}/>
+                   <a href='/account'>
+                       <img className={styles.accountPhoto} src={account}/>
+                   </a>
+
                </div>
             </Navbar>
             <SideMenu />

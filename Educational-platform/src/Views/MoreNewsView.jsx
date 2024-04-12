@@ -3,11 +3,16 @@ import styles from "./moreNewsView.module.css"
 import Navbar from "../Components/Navbar/Navbar";
 import new1 from "../images/news_images/img.png";
 import Footer from "../Components/footer/footer";
+import NavState from "../Components/Navbar/NAV/navState";
+import MainMenu from "../Components/Navbar/NAV/MainMenu";
 const MoreNewsView = () => {
+    const cachedData = localStorage.getItem('account');
     return (
         <div>
             <div className={styles.wrapper}>
-                <Navbar></Navbar>
+                {cachedData ?<NavState>
+                    <MainMenu />
+                </NavState>:  <Navbar></Navbar>}
 
 
                 <div className={styles.content}>

@@ -4,16 +4,22 @@ import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/footer/footer";
 import new1 from "../images/news_images/img.png";
 import {useNavigate} from "react-router-dom";
+import MainMenu from "../Components/Navbar/NAV/MainMenu";
+import NavState from "../Components/Navbar/NAV/navState";
 
 const MainView = () => {
     const navigate = useNavigate();
     const moreNewsBtnClick=()=>{
         navigate("/news")
     }
+    const cachedData = localStorage.getItem('account');
     return (
         <div>
             <div className={styles.wrapper}>
-                <Navbar></Navbar>
+                {cachedData ?<NavState>
+                    <MainMenu />
+                </NavState>:  <Navbar></Navbar>}
+
 
                 <div className={styles.content}>
                     <div className={styles.container_news}>
