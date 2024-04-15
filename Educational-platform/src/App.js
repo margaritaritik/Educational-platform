@@ -10,6 +10,7 @@ import LoginView from "./Views/LoginView";
 import MainView from "./Views/MainView";
 import MoreNewsView from "./Views/MoreNewsView";
 import JournalView from "./Views/JournalView";
+import RegisterView from './Views/RegisetView';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         const routes = useRoutes([
             { path: "/", element: <MainView /> },
             { path: "/account", element: <AccountView /> },
+            { path: "/register", element: <RegisterView />},
             { path: "/login", element: <LoginView /> },
             { path: "/news", element: <MoreNewsView /> },
             { path: "/journal", element: <JournalView/>},

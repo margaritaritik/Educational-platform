@@ -1,10 +1,9 @@
 import React from 'react';
-import accountPhoto from "../images/accPhoto.jpg";
-import Navbar from "../Components/Navbar/Navbar";
+import accountPhoto from "../Images/accPhoto.jpg";
 import styles from "./accountView.module.css"
 import {TextField} from "@mui/material";
-import NavState from "../Components/Navbar/NAV/navState";
-import MainMenu from "../Components/Navbar/NAV/MainMenu";
+import NavState from "../Components/Navbar/Nav/navState";
+import MainMenu from "../Components/Navbar/Nav/MainMenu";
 const AccountView = () => {
     const getStorageData = (keyName, defaultValue) =>{
         const savedItem = localStorage.getItem(keyName);

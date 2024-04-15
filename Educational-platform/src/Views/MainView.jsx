@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from "./mainView.module.css"
-import Navbar from "../Components/Navbar/Navbar";
-import Footer from "../Components/footer/footer";
-import new1 from "../images/news_images/img.png";
+import Navbar from "../Components/Navbar/navbar";
+import Footer from "../Components/Footer/footer";
+import new1 from "../Images/news_images/img.png";
 import {useNavigate} from "react-router-dom";
-import MainMenu from "../Components/Navbar/NAV/MainMenu";
-import NavState from "../Components/Navbar/NAV/navState";
+import MainMenu from "../Components/Navbar/Nav/MainMenu";
+import NavState from "../Components/Navbar/Nav/navState";
 
 const MainView = () => {
     const navigate = useNavigate();

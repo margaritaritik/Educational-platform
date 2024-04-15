@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import styles from './journalView.module.css'
-import MainMenu from "../Components/Navbar/NAV/MainMenu";
-import NavState from "../Components/Navbar/NAV/navState";
+import MainMenu from "../Components/Navbar/Nav/MainMenu";
+import NavState from "../Components/Navbar/Nav/navState";
 import {FormControl, InputLabel, MenuItem, Select} from "@mui/material";
 const JournalView = () => {
     const [checkDnevnik, setCheckDnevnik] = useState(0);

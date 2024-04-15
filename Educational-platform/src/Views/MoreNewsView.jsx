@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from "./moreNewsView.module.css"
-import Navbar from "../Components/Navbar/Navbar";
-import new1 from "../images/news_images/img.png";
-import Footer from "../Components/footer/footer";
-import NavState from "../Components/Navbar/NAV/navState";
-import MainMenu from "../Components/Navbar/NAV/MainMenu";
+import Navbar from "../Components/Navbar/navbar";
+import new1 from "../Images/news_images/img.png";
+import Footer from "../Components/Footer/footer";
+import NavState from "../Components/Navbar/Nav/navState";
+import MainMenu from "../Components/Navbar/Nav/MainMenu";
 const MoreNewsView = () => {
     const cachedData = localStorage.getItem('account');
     return (

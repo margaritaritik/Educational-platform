@@ -16,24 +16,13 @@ const Navbar = () => {
             <div className={style.container}>
                 <div className={style.box}>
                     <div className={style.logo_image}>
-                        <a href='/'><img src={Logo} className={style.logo} alt="логотип" /></a>
+                        <a href='/'><img src={Logo} className={style.logo} alt="логотип"/></a>
                     </div>
-                    <ul
-                        className={
-                            nav ? [style.menu, style.active].join(' ') : [style.menu]
-                        }
-                    >
-                        {/*{testLogin===1 ? <li><a href='/'>Назад</a></li> : <li>*/}
-                        {/*    <a href='/login'>РЕГИСТРАЦИЯ</a>*/}
-                        {/*    </li>}*/}
-
-                        {testLogin===0 && <li><a href='/login'>Регистрация</a></li>
-                        }
-                        {testLogin===1 && <li><a href='/'>Назад</a></li>
-                        }
-                        {testLogin===2 && <li><a href='/account'>Аккаунт</a></li>
-                        }
-
+                    <ul className={nav ? [style.menu, style.active].join(' ') : [style.menu]}>
+                        {testLogin===0 && <li><a href='/login'>Вход</a></li>}
+                        {testLogin===0 && <li><a href='/register'>Регистрация</a></li>}
+                        {testLogin===1 && <li><a href='/'>Назад</a></li>}
+                        {testLogin===2 && <li><a href='/account'>Аккаунт</a></li>}
                     </ul>
                     <div onClick={() => setNav(!nav)} className={style.mobile_btn}>
                         {nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}

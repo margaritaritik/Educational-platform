@@ -1,11 +1,11 @@
 import {useState} from "react";
 import people from "../Data/items";
-import styles from './loginView.module.css'
+import styles from './RegisterView.module.css'
 import Navbar from "../Components/Navbar/navbar";
 import { useNavigate } from "react-router-dom";
 import { TextField } from "@mui/material";
 
-const LoginView = () => {
+const RegisterView = () => {
     const navigate = useNavigate();
     const [login, setLogin] = useState("");
     const [loginError, setLoginError] = useState("");
@@ -46,7 +46,7 @@ for(let i = 0;i < people.length; i++){
             <Navbar></Navbar>
             <div className={styles.center}>
             <div className={styles.container}>
-                        <h3>АВТОРИЗАЦИЯ</h3>
+                        <h3>РЕГИСТРАЦИЯ</h3>
                        <div className={styles.textField}>
                             <TextField name="title"
                                         type="text" value={login}
@@ -65,7 +65,8 @@ for(let i = 0;i < people.length; i++){
             </div>
         
         </div>
+
     );
 };
 
-export default LoginView;
+export default RegisterView;

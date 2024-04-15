@@ -1,0 +1,15 @@
+.error {
+    color: red;
+}
+
+:root {
+    --main-color: #3d9c62;
+}
+
+.App{
+    height: 100vh;
+}
+
+button{
+    background: var(--main-color);
+}
