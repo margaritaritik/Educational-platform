@@ -49,15 +49,12 @@ for(let i = 0;i < people.length; i++){
                         <h3>РЕГИСТРАЦИЯ</h3>
                        <div className={styles.textField}>
                             <TextField name="title"
-                                        type="text" value={login}
-                                        label="Логин" variant="outlined" onChange={e => setLogin(e.target.value)}/>
+                                        type="text" value={login} label="Логин" variant="outlined" onChange={e => setLogin(e.target.value)}/>
                             {loginError && <div className="error"> {loginError}</div>}
                         </div>
                         <div className={styles.textField}>
-                            <TextField name="title"
-                                        type="password" value={password}
+                            <TextField name="title" type="password" value={password}
                                         label="Пароль" variant="outlined" onChange={e => setPassword(e.target.value)}/>
-
                             {passwordError && <div className="error">{passwordError}</div>}
                         </div >
                         <button onClick={ClickBtn}>Войти</button>

@@ -9,8 +9,6 @@ const Navbar = () => {
     const [account, setAccount]=useState("")
     const savedItem = localStorage.getItem("account");
 
-
-
     return (
         <header className={style.header}>
             <div className={style.container}>

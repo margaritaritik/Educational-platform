@@ -10,10 +10,10 @@ import LoginView from "./Views/LoginView";
 import MainView from "./Views/MainView";
 import MoreNewsView from "./Views/MoreNewsView";
 import JournalView from "./Views/JournalView";
-import RegisterView from './Views/RegisetView';
+import RegisterView from "./Views/RegisetView";
+import TableView from "./Views/TableView";
 
 function App() {
-
     const Test = () => {
         const routes = useRoutes([
             { path: "/", element: <MainView /> },
@@ -21,7 +21,8 @@ function App() {
             { path: "/register", element: <RegisterView />},
             { path: "/login", element: <LoginView /> },
             { path: "/news", element: <MoreNewsView /> },
-            { path: "/journal", element: <JournalView/>},
+            { path: "/journal", element: <JournalView/> },
+            { path: "/table", element: <TableView/> },
         ]);
         return routes;
     };
