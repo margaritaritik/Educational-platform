@@ -71,6 +71,7 @@ SideMenu.defaultProps = {
             <MenuLink href="/news">Новости</MenuLink>
             <MenuLink href="/about_org">Об организации</MenuLink>
             <MenuLink href="/contact">Контакты</MenuLink>
+            <MenuLink href="/table">Таблица</MenuLink>
             <MenuLink href="/" onClick={()=>{
                 localStorage.clear();}}>Выход</MenuLink>
         </>

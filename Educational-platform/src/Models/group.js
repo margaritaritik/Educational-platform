@@ -4,9 +4,9 @@ class Group{
     this.faculty = faculty;
   }
 
-  toString(){
-    return Group: ${this.name}, Age: ${this.faculty};
-  }
+  // toString(){
+  //   return Group: ${this.name}, Age: ${this.faculty};
+  // }
 }
 
 

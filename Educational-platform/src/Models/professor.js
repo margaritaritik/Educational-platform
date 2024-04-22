@@ -7,7 +7,7 @@ class Professor{
     this.email = email;
   }
 
-  toString(){
-    return Professor: ${this.first_name}, ${this.last_name}, ${this.third_name}, Email: ${this.email};
-  }
+  // toString(){
+  //   return Professor: ${this.first_name}, ${this.last_name}, ${this.third_name}, Email: ${this.email};
+  // }
 }

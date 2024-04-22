@@ -7,9 +7,9 @@ class User {
         this.isAdmin = isAdmin;
     }
 
-    toString() {
-        return User: ${this.name}, Email: ${this.email}, Age: ${this.age};
-    }
+    // toString() {
+    //     return User: ${this.name}, Email: ${this.email}, Age: ${this.age};
+    // }
 
     promoteToAdmin() {
         this.isAdmin = true;

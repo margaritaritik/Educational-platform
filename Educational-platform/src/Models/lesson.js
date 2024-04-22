@@ -20,4 +20,4 @@ class Lesson{
   }
 }
 
-export default LessonModel
+export default Lesson
