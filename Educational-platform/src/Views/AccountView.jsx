@@ -28,10 +28,13 @@ const AccountView = () => {
             </div>
             <div className={styles.container_info}>
                 <div className={styles.info_input1}>
-                    <TextField name="title" type="text" label="Имя" variant="outlined" />
-                    <TextField name="title" type="text" label="Фамилия" variant="outlined" />
-                    <TextField name="title" type="text" label="Отчество" variant="outlined" />
-                    <TextField name="title" type="text" variant="outlined" />
+                    <TextField className={styles.input1} name="title" type="text" label="Имя" variant="outlined" />
+                    <TextField className={styles.input1} name="title" type="text" label="Фамилия" variant="outlined" />
+                    <TextField className={styles.input1} name="title" type="text" label="Отчество" variant="outlined" />
+                    <TextField className={styles.input1} name="title" type="text" variant="outlined" />
+                    <TextField name="title"
+                               type="text"
+                               label="логин" variant="outlined" />
                 </div>
                 <div className={styles.info_input2}>
                     <TextField name="title"
@@ -46,9 +49,7 @@ const AccountView = () => {
                     <TextField name="title"
                                type="text"
                                label="логин" variant="outlined" />
-                    <TextField name="title"
-                               type="text"
-                               label="логин" variant="outlined" />
+                  
                     <div className={styles.container_save_btn}>
                         <button className={styles.save_info_btn}>
                             Сохранить
