@@ -4,12 +4,22 @@ import styles from "./accountView.module.css"
 import {TextField} from "@mui/material";
 import NavState from "../Components/Navbar/Nav/navState";
 import MainMenu from "../Components/Navbar/Nav/MainMenu";
+import Breadcrumbs from '@mui/material/Breadcrumbs';
+import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
+import BreadCrumbs from '../Components/BreadCrumbs/breadCrumbs';
+
+
+
 const AccountView = () => {
+    const breadCrumbs=[{name:'Главная',href:'/'},{name:'Аккаунт',href:'/account'}];
     const getStorageData = (keyName, defaultValue) =>{
         const savedItem = localStorage.getItem(keyName);
         const parsedItem = JSON.parse(savedItem);
         return parsedItem || defaultValue;
     }
+   
+
     const savedItem =getStorageData("account",'no').name;
     const savedImage = localStorage.getItem("accountImage");
     return (
@@ -17,7 +27,10 @@ const AccountView = () => {
             <NavState>
                 <MainMenu />
             </NavState>
+            
+        <BreadCrumbs BreadCrumbsNames={breadCrumbs}></BreadCrumbs>
         <div className={styles.container}>
+        
             <div className={styles.container_account}>
                 <img src={accountPhoto}/>
                 <p> {savedItem} </p>

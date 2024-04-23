@@ -1,0 +1,24 @@
+.breadCrumbs {
+    color: #878787;
+    margin-left: 20vw;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.breadCrumbs a{
+    color: #878787;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.breadCrumbs p{
+    color: #878787;
+    
+}
+.breadCrumbs li{
+    color: #878787;
+    
+}
