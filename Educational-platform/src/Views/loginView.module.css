@@ -1,5 +1,6 @@
 .App{
     display: flex;
+    background-image: url("/Educational-platform/src/Images/background.svg");
 }
 
 .textField input{

@@ -11,6 +11,9 @@ import MoreNewsView from "./Views/MoreNewsView";
 import JournalView from "./Views/JournalView";
 import RegisterView from "./Views/RegisetView";
 import TableView from "./Views/TableView";
+import ProfessorsView from "./Views/ProfessorsView";
+import GroupsView from "./Views/ProfessorsView";
+import StaffView from "./Views/StaffView";
 
 function App() {
     const Test = () => {
@@ -22,6 +25,9 @@ function App() {
             { path: "/news", element: <MoreNewsView /> },
             { path: "/journal", element: <JournalView/> },
             { path: "/table", element: <TableView/> },
+            { path: "/groups", element: <GroupsView/>},
+            { path: "/professors", element: <ProfessorsView/>},
+            { path: "/staff", element: <StaffView/>},
         ]);
         return routes;
     };

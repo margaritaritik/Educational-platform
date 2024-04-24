@@ -3,6 +3,7 @@ import people from "../Data/items";
 import styles from './loginView.module.css'
 import Navbar from "../Components/Navbar/navbar";
 import { useNavigate } from "react-router-dom";
+import background_image from "../Images/background.svg";
 import { TextField } from "@mui/material";
 
 const LoginView = () => {
