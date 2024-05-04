@@ -14,7 +14,7 @@ table.iksweb tr:hover td{color:#2a323d;cursor:default;}
     display: flex;
 }
 
-.btn_dnevnik button:first-child{
+.btn_dnevnik button:not(:last-child){
     margin-right: 10px;
 }
 

@@ -34,7 +34,7 @@ const LoginView = () => {
 for(let i = 0;i < people.length; i++){
     if(login === people[i].login && password === people[i].pass){
         console.log(people[i].login);
-        localStorage.setItem('account',JSON.stringify({login:login,name:people[i].name, role: people[i].role}));
+        localStorage.setItem('account',JSON.stringify({login:login,name:people[i].name,speciality:people[i].speciality, surname:people[i].surname,lastname:people[i].lastname,group:people[i].group,email:people[i].email,birthday:people[i].birthday, role: people[i].role}));
         localStorage.setItem('accountImage',JSON.stringify(people[i].img));
         navigate("/account");
         break;

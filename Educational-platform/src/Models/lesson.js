@@ -8,6 +8,7 @@ class Lesson{
     this.code = code;
     this.hours_theory = hours_theory;
     this.hours_practice = hours_practice;
+    this.hours_exam = hours_exam;
     this.hours_consult = hours_consult;
     this.first_semester = first_semester;
     this.second_semester = second_semester;

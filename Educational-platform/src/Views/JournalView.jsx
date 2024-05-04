@@ -3,7 +3,12 @@ import styles from './journalView.module.css'
 import MainMenu from "../Components/Navbar/Nav/MainMenu";
 import NavState from "../Components/Navbar/Nav/navState";
 import {FormControl, InputLabel, MenuItem, Select} from "@mui/material";
+import ServerController from '../Controller/controller';
 const JournalView = () => {
+    let [lessons, setLessons] = useState([]);
+    const serverController = new ServerController();
+
+    lessons = serverController.getLessons();
     const [checkDnevnik, setCheckDnevnik] = useState(0);
     const [discipline, setDiscipline] = React.useState('');
     const [group, setGroup] = React.useState('');
@@ -32,6 +37,7 @@ const JournalView = () => {
                 <div className={styles.btn_dnevnik}>
                     <button className={checkDnevnik===0 ? styles.btn_check: styles.btn_no_check} onClick={()=>{setCheckDnevnik(0)}}> Журнал</button>
                     <button className={checkDnevnik===1 ? styles.btn_check: styles.btn_no_check} onClick={()=>{setCheckDnevnik(1)}}> Дисциплина</button>
+                    <button className={checkDnevnik===2 ? styles.btn_check: styles.btn_no_check} onClick={()=>{setCheckDnevnik(2)}}> Учебный план</button>
                 </div>
                 {checkDnevnik===0 &&
                     <div>
@@ -62,6 +68,7 @@ const JournalView = () => {
                         <MenuItem value={30}>Геометрия</MenuItem>
                     </Select>
                 </FormControl>
+
                     </div>
 
                     <table className={styles.iksweb}>
@@ -369,8 +376,53 @@ const JournalView = () => {
                 </tr>
                 </tbody>
                 </table> }
-
-            </div> }
+                {checkDnevnik===2 &&
+                <div>
+                    <table className={styles.iksweb}>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Название предмета</th>
+                        <th>Код предмета</th>
+                        <th>Часов по теории</th>
+                        <th>Часов по практике</th>
+                        <th>Часов консультаций</th>
+                        <th>Часов экзамена</th>
+                        <th>1 семест</th>
+                        <th>2 семестр </th>
+                        <th>3 семестр</th>
+                        <th>4 семестр</th>
+                        <th>5 семестр</th>
+                        <th>6 семестр</th>
+                        <th>Часов всего</th>
+                        <th>Колличество подгрупп</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {lessons.map(lesson => (
+                    <tr key={lesson.id} >
+                        <td>{lesson.id}</td>
+                        <td>{lesson.name}</td>
+                        <td>{lesson.code}</td>
+                        <td>{lesson.hours_theory}</td>
+                        <td>{lesson.hours_practice}</td>
+                        <td>{lesson.hours_consult}</td>
+                        <td>{lesson.hours_exam}</td>
+                        <td>{lesson.first_semester}</td>
+                        <td>{lesson.second_semester}</td>
+                        <td>{lesson.third_semester}</td>
+                        <td>{lesson.forth_semester}</td>
+                        <td>{lesson.fifth_semester}</td>
+                        <td>{lesson.sixth_semester}</td>
+                        <td>{lesson.hours_total}</td>
+                        <td>{lesson.count_subgroups}</td>
+                    </tr>
+                    ))}
+                    </tbody>
+                </table>
+                    </div>}
+            </div>
+             }
             { savedRole==="student" &&
             <div className={styles.content}>
 
@@ -481,6 +533,7 @@ const JournalView = () => {
             </table> }
 
         </div> }
+       
         </div>
 
     );

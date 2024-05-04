@@ -8,9 +8,9 @@ class ServerController{
   getToken(){}
 
   getLessons(){
-    let lesson1 = new Lesson(1, "Русский язык", "ПМ04", 10, 1, 5, 4, 1, 1, 1, 1, 1, 1, 1, 90, 2);
-    let lesson2 = new Lesson(2, "Русский язык", "ПМ04", 10, 1, 5, 4, 1, 1, 1, 1, 1, 1, 1, 90, 2);
-    let lesson3 = new Lesson(3, "Русский язык", "ПМ04", 10, 1, 5, 4, 1, 1, 1, 1, 1, 1, 1, 90, 2);
+    let lesson1 = new Lesson(1, "Русский язык", "ПМ04", 10, 1, 5, 4, 1, 1, 1, 1, 1, 1, 90, 2);
+    let lesson2 = new Lesson(2, "Русский язык", "ПМ04", 10, 1, 5, 4, 1, 1,  1, 1, 1, 1, 90, 2);
+    let lesson3 = new Lesson(3, "Русский язык", "ПМ04", 10, 1, 5, 4, 1, 1,  1, 1, 1, 1, 90, 2);
     let lessons = [lesson1, lesson2, lesson3];
     return lessons
   }
