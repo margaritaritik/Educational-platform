@@ -14,6 +14,18 @@ const people=[
         role:"student",
     },
     {
+        id:5,
+        login:"admin",
+        name:"Админ",
+        surname: "Админович",
+        lastname: "Админов",
+        email:'admin@mail.ru',
+        birthday: "20.02.2000",
+        speciality: "Админ",
+        pass:"admin",
+        role:"admin",
+    },
+    {
         id:1,
         login:"student",
         pass:"1",

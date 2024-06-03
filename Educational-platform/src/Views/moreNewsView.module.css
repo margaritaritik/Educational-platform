@@ -44,14 +44,23 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 .item_news{
+    overflow-x: hidden;
     margin-top: 50px;
-    margin-right: 40px;
-    width: 250px;
+    width: 100%;
+    max-width: 259px;
 }
-.news .item_news p:first-child{
-    font-size: 12px;
+
+.item_news img{
+    width: 200px;
+    object-fit: cover;
+    height: 200px;
+    background-size: cover;
+}
+.item_news .date{
+    font-size: 16px;
     color: #464646;
 }
 .news .item_news p:last-child{

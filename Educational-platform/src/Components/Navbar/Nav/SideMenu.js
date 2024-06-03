@@ -61,11 +61,18 @@ export const SideMenu = ({ children }) => {
 SideMenu.propTypes = {
     children: PropTypes.node,
 };
+const getStorageData = (keyName, defaultValue) =>{
+  const savedItem = localStorage.getItem(keyName);
+  const parsedItem = JSON.parse(savedItem);
+  return parsedItem || defaultValue;
+};
+
+const savedItem =getStorageData("account",'no');
 
 SideMenu.defaultProps = {
     children: (
-        <>
-            <MenuLink href="/">Главная</MenuLink>
+        <>{savedItem.role!=="admin" &&
+<div> <MenuLink href="/">Главная</MenuLink>
             <MenuLink href="/journal">Дневник</MenuLink>
             <MenuLink href="/raspisanie">Расписание</MenuLink>
             <MenuLink href="/news">Новости</MenuLink>
@@ -75,7 +82,19 @@ SideMenu.defaultProps = {
             <MenuLink href="/groups">Учебные группы</MenuLink>
             <MenuLink href="/professors">Преподавательский состав</MenuLink>
             <MenuLink href="/" onClick={()=>{
-                localStorage.clear();}}>Выход</MenuLink>
+                localStorage.clear();}}>Выход</MenuLink></div>}{savedItem.role==="admin" && <div>
+                  <div> <MenuLink href="/">Главная</MenuLink>
+            <MenuLink href="/journal">Дневник</MenuLink>
+            <MenuLink href="/raspisanie">Расписание</MenuLink>
+            <MenuLink href="/about_org">Об организации</MenuLink>
+            <MenuLink href="/contact">Контакты</MenuLink>
+            <MenuLink href="/groups">Учебные группы</MenuLink>
+            <MenuLink href="/professors">Преподавательский состав</MenuLink>
+            <MenuLink href="/" onClick={()=>{
+                localStorage.clear();}}>Выход</MenuLink></div>
+                </div>
+        } 
+           
         </>
     ),
 };

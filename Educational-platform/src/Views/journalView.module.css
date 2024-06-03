@@ -4,7 +4,17 @@ table.iksweb th{font-weight:normal;font-size:17px; color:#ffffff;background-colo
 table.iksweb td{font-size:14px;color:#000000; width: 25px}
 table.iksweb td,table.iksweb th{white-space:pre-wrap;padding:7px 1px;line-height:14px;vertical-align: middle;border: 1px solid #878787;}	table.iksweb tr:hover{background-color:#c0d1eb}
 table.iksweb tr:hover td{color:#2a323d;cursor:default;}
+.changes{
+    
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0px;
 
+}
+.changes button{
+margin-left: 10px;
+background: #3d9c62;
+}
 .content {
     width:100%;
     max-width: 80vw;

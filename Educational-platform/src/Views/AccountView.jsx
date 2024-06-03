@@ -10,7 +10,6 @@ import Link from '@mui/material/Link';
 import BreadCrumbs from '../Components/BreadCrumbs/breadCrumbs';
 
 
-
 const AccountView = () => {
     const breadCrumbs=[{name:'Главная',href:'/'},{name:'Аккаунт',href:'/account'}];
     const getStorageData = (keyName, defaultValue) =>{
@@ -19,7 +18,6 @@ const AccountView = () => {
         return parsedItem || defaultValue;
     }
    
-
     const savedItem =getStorageData("account",'no');
     const savedImage = localStorage.getItem("accountImage");
     return (
@@ -29,7 +27,7 @@ const AccountView = () => {
             </NavState>
             
         <BreadCrumbs BreadCrumbsNames={breadCrumbs}></BreadCrumbs>
-        <div className={styles.container}>
+        {savedItem.role!=="admin"&&<div className={styles.container}>
         
             <div className={styles.container_account}>
                 <img src={accountPhoto}/>
@@ -62,7 +60,7 @@ const AccountView = () => {
                     <TextField defaultValue="Что-то"  name="title"
                                type="text"
                                label="Что-то" variant="outlined" />
-                  
+
                     <div className={styles.container_save_btn}>
                         <button className={styles.save_info_btn}>
                             Сохранить
@@ -71,8 +69,12 @@ const AccountView = () => {
                 </div>
 
             </div>
+        </div>}
+       {savedItem.role==="admin"&&<div>
+        
+        </div>}
         </div>
-        </div>
+        
     );
 };
 

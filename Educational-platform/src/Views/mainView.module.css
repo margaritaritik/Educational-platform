@@ -26,6 +26,7 @@ body {
 }
 .news_head p{
     width: 500px;
+    font-weight: bold;
 }
 .news_head button{
     width: 170px;
@@ -42,13 +43,23 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 .item_news{
     margin-top: 50px;
+    width: 100%;
+    max-width: 200px;
 }
-.news .item_news p:first-child{
-    font-size: 12px;
+.item_news img{
+    width: 200px;
+    object-fit: cover;
+    height: 200px;
+    background-size: cover;
+}
+.item_news .date{
+    font-size: 16px;
     color: #464646;
+    font-weight: bold;
 }
 .news .item_news p:last-child{
     font-size: 15px;
