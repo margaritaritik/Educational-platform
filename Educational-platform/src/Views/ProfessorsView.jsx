@@ -27,7 +27,7 @@ const MoreNewsView = () => {
           };
           const handleButtonClick = () => {
             if(savedRole!=="admin"){
-                navigate("/");
+                navigate("/account");
             }
             else{
         // Здесь вы можете выполнить действия с выбранными строками, например, изменить их значения
@@ -37,7 +37,7 @@ const MoreNewsView = () => {
         // 
         // localStorage.setItem('changeUser',JSON.stringify(selectedItems));
        
-        navigate("/account"); }
+        navigate("/change"); }
     
           };
     return (<>

@@ -13,6 +13,7 @@ import RegisterView from "./Views/RegisetView";
 import TableView from "./Views/TableView";
 import ProfessorsView from "./Views/ProfessorsView";
 import GroupsView from "./Views/GropsView";
+import ChangedView from "./Views/ChancedView";
 import StaffView from "./Views/StaffView";
 import TestAPI from "./Tests/testAPI"
 function App() {
@@ -20,6 +21,7 @@ function App() {
         const routes = useRoutes([
             { path: "/", element: <MainView /> },
             { path: "/account", element: <AccountView /> },
+            { path: "/change", element: <ChangedView /> },
             { path: "/register", element: <RegisterView />},
             { path: "/login", element: <LoginView /> },
             { path: "/news", element: <MoreNewsView /> },

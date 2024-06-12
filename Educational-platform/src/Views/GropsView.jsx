@@ -26,10 +26,10 @@ const MoreNewsView = () => {
             ));
           };
           const handleButtonClick = () => {
-            if(savedRole!=="admin"){
-                navigate("/");
-            }
-            else{
+            // if(savedRole!=="admin"){
+            //     navigate("/account");
+            // }
+            // else{
         // Здесь вы можете выполнить действия с выбранными строками, например, изменить их значения
         const selectedItems = dataArray.filter(item => item.selected);
         console.log("Выбранные элементы:", selectedItems);
@@ -37,7 +37,8 @@ const MoreNewsView = () => {
         // 
         // localStorage.setItem('changeUser',JSON.stringify(selectedItems));
        
-        navigate("/account"); }
+        navigate("/change"); 
+    // }
     
           };
     return (<>
@@ -54,7 +55,7 @@ const MoreNewsView = () => {
                         <th >Группа</th>
                         <th >Специальность</th>
                         <th >Электронная почта</th>
-                        {savedRole==="admin" && <th>✓</th>}
+                     <th>✓</th>
                         </thead>
                     <tbody>
                    
@@ -67,13 +68,14 @@ const MoreNewsView = () => {
                     <td contentEditable="true">{item.group}</td>
                     <td contentEditable="true">{item.speciality}</td>
                     <td contentEditable="true">{item.email}</td>
-                    {savedRole==="admin" && <td>
+
+                    <td>
                 <input
                   type="checkbox"
                   checked={item.selected}
                   onChange={() => handleCheckboxChange(item.id)}
                 />
-              </td>}
+              </td>
               
 </tr>
    ))}                     
@@ -81,7 +83,7 @@ const MoreNewsView = () => {
                     </tbody>
                     </table>
                     <div className={styles.changes}><button className={styles.saveChangesBtn} onClick={handleButtonClick}>Изменить</button>
-                    {savedRole==="admin" && <><button className={styles.saveChangesBtn} onClick={()=>{navigate("/account")}}>Добавить</button>
+                    {savedRole==="admin" && <><button className={styles.saveChangesBtn} onClick={handleButtonClick}>Добавить</button>
                     <button className={styles.saveChangesBtn} >Удалить</button></> }
                
                     </div>

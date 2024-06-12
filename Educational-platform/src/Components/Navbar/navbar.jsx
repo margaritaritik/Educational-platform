@@ -18,7 +18,7 @@ const Navbar = () => {
                     </div>
                     <ul className={nav ? [style.menu, style.active].join(' ') : [style.menu]}>
                         {testLogin===0 && <li><a href='/login'>Вход</a></li>}
-                        {testLogin===0 && <li><a href='/register'>Регистрация</a></li>}
+                        {/* {testLogin===0 && <li><a href='/register'>Регистрация</a></li>} */}
                         {testLogin===1 && <li><a href='/'>Назад</a></li>}
                         {testLogin===2 && <li><a href='/account'>Аккаунт</a></li>}
                     </ul>
