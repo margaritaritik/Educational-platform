@@ -37,3 +37,9 @@ width: 60px;
 .container_media a{
   padding: 10px;
 }
+
+.container_header img{
+    width: 100%;
+    max-width: 214px;
+    margin: 0 auto;
+}

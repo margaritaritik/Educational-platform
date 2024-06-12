@@ -73,23 +73,19 @@ SideMenu.defaultProps = {
     children: (
         <>{savedItem.role!=="admin" &&
 <div> <MenuLink href="/">Главная</MenuLink>
-            <MenuLink href="/journal">Дневник</MenuLink>
-            <MenuLink href="/raspisanie">Расписание</MenuLink>
-            <MenuLink href="/news">Новости</MenuLink>
-            <MenuLink href="/about_org">Об организации</MenuLink>
-            <MenuLink href="/contact">Контакты</MenuLink>
-            <MenuLink href="/table">Таблица</MenuLink>
-            <MenuLink href="/groups">Учебные группы</MenuLink>
+            <MenuLink href="/journal">Учебная нагрузка</MenuLink>
             <MenuLink href="/professors">Преподавательский состав</MenuLink>
+            <MenuLink href="/groups">Учебные группы</MenuLink>
+            <MenuLink href="/news">Новости</MenuLink>
+  
             <MenuLink href="/" onClick={()=>{
                 localStorage.clear();}}>Выход</MenuLink></div>}{savedItem.role==="admin" && <div>
                   <div> <MenuLink href="/">Главная</MenuLink>
-            <MenuLink href="/journal">Дневник</MenuLink>
-            <MenuLink href="/raspisanie">Расписание</MenuLink>
-            <MenuLink href="/about_org">Об организации</MenuLink>
-            <MenuLink href="/contact">Контакты</MenuLink>
-            <MenuLink href="/groups">Учебные группы</MenuLink>
+            <MenuLink href="/journal">Учебная нагрузка</MenuLink>
             <MenuLink href="/professors">Преподавательский состав</MenuLink>
+            <MenuLink href="/groups">Учебные группы</MenuLink>
+
+       
             <MenuLink href="/" onClick={()=>{
                 localStorage.clear();}}>Выход</MenuLink></div>
                 </div>

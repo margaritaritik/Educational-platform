@@ -12,9 +12,9 @@ import JournalView from "./Views/JournalView";
 import RegisterView from "./Views/RegisetView";
 import TableView from "./Views/TableView";
 import ProfessorsView from "./Views/ProfessorsView";
-import GroupsView from "./Views/ProfessorsView";
+import GroupsView from "./Views/GropsView";
 import StaffView from "./Views/StaffView";
-
+import TestAPI from "./Tests/testAPI"
 function App() {
     const Test = () => {
         const routes = useRoutes([
@@ -28,6 +28,7 @@ function App() {
             { path: "/groups", element: <GroupsView/>},
             { path: "/professors", element: <ProfessorsView/>},
             { path: "/staff", element: <StaffView/>},
+            { path: "/testapi", element: <TestAPI/>},
         ]);
         return routes;
     };

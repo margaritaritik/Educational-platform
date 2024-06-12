@@ -36,7 +36,8 @@ for(let i = 0;i < people.length; i++){
         console.log(people[i].login);
         localStorage.setItem('account',JSON.stringify({login:login,name:people[i].name,speciality:people[i].speciality, surname:people[i].surname,lastname:people[i].lastname,group:people[i].group,email:people[i].email,birthday:people[i].birthday, role: people[i].role}));
         localStorage.setItem('accountImage',JSON.stringify(people[i].img));
-        navigate("/account");
+       if(people[i].role!=="admin"){ navigate("/account")} 
+       else if(people[i].role==="admin"){navigate("/")}
         break;
     }
 

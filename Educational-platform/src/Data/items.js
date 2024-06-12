@@ -1,4 +1,4 @@
-// import account1 from "http://localhost:3000/src/images/accPhoto.jpg"
+
 const people=[
     {
         id:1,
@@ -11,7 +11,7 @@ const people=[
         birthday: "20.09.2004",
         speciality: "Лечебное дело",
         pass:"1",
-        role:"student",
+        role:"teacher",
     },
     {
         id:5,
@@ -25,13 +25,7 @@ const people=[
         pass:"admin",
         role:"admin",
     },
-    {
-        id:1,
-        login:"student",
-        pass:"1",
-        role:"student",
-        img: "../images/accPhoto.jpg"
-    },
+
     {
         id:2,
         login:"teacher",
