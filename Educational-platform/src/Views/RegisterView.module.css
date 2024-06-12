@@ -1,6 +1,5 @@
 .App{
     display: flex;
-    background-image: url("/src/Images/background.svg");
 }
 
 .textField input{
@@ -48,4 +47,3 @@ h3{
     border: transparent;
     color: white;
 }
-

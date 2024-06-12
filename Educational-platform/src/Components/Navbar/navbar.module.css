@@ -1,6 +1,5 @@
 .header {
-
-
+    background-color: #9696964d;
 }
 .container{
     background-color: #ffffff4d;
@@ -84,7 +83,7 @@
 
 a {
     color: #341c1c;
-    padding: 1em 1.5em;
+    
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
@@ -96,10 +95,12 @@ a:hover {
 }
 
 a:active {
-
     top: 5px;
 }
 li{
     list-style-type: none;
 }
 
+.cHbCxd{
+    --main-color: var(--main-color)!important;
+}
